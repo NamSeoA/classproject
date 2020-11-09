@@ -178,7 +178,42 @@ from emp
 where comm in(300, 500, 1400)
 ;
 
+-- 찾으려는 이름이 F로 시작 하는 것은 알지만 그 뒤의 문자는 모를 경우
+select *
+from emp
+-- where ename like 'F%'   -- F로 시작하고 뒤에는 어떤 문자가 와도 상관없다
+-- where ename like '%S'   -- S로 끝나고 앞에는 어떤 문자가 와도 상관없다
+-- where ename like '%AD%'     -- 이름에 AD문자를 포함하는 이름을 검색
+-- where ename like '_A%'     -- 이름에 첫번째 문자는 어떤 문자든 상관없고 두번째 문자가 A인 이름
+-- where ename like '__R%'       -- 첫번째, 두번째 문자는 상관없고 세번째 스펠링 R
+-- 000000-1000000 '_______1%'
+-- '1987/12/19' -> '_____12%'
+where ename not like '%A%'
+;
 
+-- 커미션을 받지 않은 사원을 검색
+select *
+from emp
+-- where comm = null
+where comm is null or comm = 0
+;
 
+-- 커미션을 받는 사원을 검색
+select *
+from emp
+where comm is not null and comm >0
+;
 
+-- 사원의 리스트를 
+-- 급여의 오름차순으로 정렬해보자
+select *
+from emp
+-- order by sal asc      -- 오름차순
+-- order by sal desc     -- 내림차순
+-- order by sal             -- 생략 -> ASC 오름차순
+-- order by ename desc
+-- order by comm desc
+-- order by hiredate        -- 날짜의 '작다' 표현은 오래된 날짜 : 오름차순은 오래된 날짜부터 최근로 정렬
+order by hiredate desc, sal asc
+;
 
