@@ -217,3 +217,88 @@ from emp
 order by hiredate desc, sal asc
 ;
 
+
+-- select문 과제
+select ename, sal, sal+300
+from emp
+;
+
+
+select ename, sal, sal*12+100
+from emp
+order by sal*12+100 desc
+;
+
+select ename, sal
+from emp
+where sal > 2000
+order by sal desc
+;
+
+select ename, empno
+from emp
+where empno = 7788
+;
+
+select ename, sal
+from emp
+where not sal between 2000 and 3000 
+;
+
+select ename, job, hiredate
+from emp
+where hiredate between '1981/02/20' and '1981/05/01'
+;
+
+
+select ename, deptno
+from emp
+where deptno between 20 and 30
+order by ename desc
+;
+
+select ename, sal, deptno
+from emp
+where sal between 2000 and 3000 and deptno in(20,30)
+order by ename asc
+;
+
+select ename, hiredate
+from emp
+where hiredate like '81%'
+;
+
+select ename, job
+from emp
+where mgr is null
+;
+
+
+select ename, sal, comm
+from emp
+where comm>0
+order by sal desc, comm desc
+;
+
+select ename
+from emp
+where ename like '__R%'
+;
+
+select ename
+from emp
+where ename like '%A%'
+AND ename like '%E%'
+;
+
+
+select ename, job, sal
+from emp
+where job in('CLERE', 'SALESMAN')and not sal in(1600,950,1300)
+;
+
+
+SELECT ename, sal, comm
+from emp
+where comm > 500
+;
