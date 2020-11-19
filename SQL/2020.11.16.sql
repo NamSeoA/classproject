@@ -144,4 +144,15 @@ delete from phoneinfro_basic where idx=10;
 
 
 
+select *
+from phoneinfor_basic pb, phoneinfor_univ pu, phoneinfor_com pc;
+
+
+
+
+
+
+
+
+
 

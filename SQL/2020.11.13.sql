@@ -165,7 +165,7 @@ select empno, ename from emp10 where empno= 2222;
 create index index_emp10_ename
 on emp10(ename);
 
--- empno indxe로 생성
+-- empno index로 생성
 create index index_emp10_empno
 on emp10(empno);
 
