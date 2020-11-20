@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!-- html5 문서임을 정의 -->
+
+<html lang="ko">
+    <!-- html 문서의 시작 작성하는 언어 정의 -->
+    <head><!-- html 문서의 정보를 정의 -->
+        <title>First HTML5</title> <!-- 웹 문서의 제목 -->
+        <meta charset="utf-8"> <!--문서의 속성-->
+        <style>
+            h1 {
+                background-color: darkseagreen;
+                color: cornsilk;
+            }
+            h2 {
+                background-color: forestgreen;
+                color: white;
+            }
+            
+            div {
+                background-color: aquamarine;
+            }
+            p {
+                background-color: beige;
+            }
+            span {
+                background-color: bisque;
+            }
+        </style> <!-- 웹 문서의 요소들의 스타일 정의 -->
+        <script>
+           // alert('안녕하세요');
+        </script> 
+        <!--자바스크립트 정의-->
+    </head>
+    
+    <body>
+        
+        <h3 id="top"> INDEX </h3>
+        <ol> 
+            <li><a href="http://www.naver.com">Naver</a> </li>
+            <li><a href="http://192.168.0.24/">link</a> </li>
+            <li><a href="#tag-1"> Heading tag </a> </li>
+            <li><a href="#tag-2"> P tag </a> </li>
+            <li> <a href="#tag-3"> br tag </a></li>
+            <li> <a href="#tag-4"> List tag </a></li>
+            <li> <a href="#tag-5"> Table tag </a></li>
+            <li> <a href="#tag-6"> img tag </a></li>
+            <li> <a href="#tag-7"> 공간분할 tag </a></li>
+        </ol>
+        <hr>
+        
+        <h1> for tag </h1>
+        
+        <form action="#" method="get">
+            
+            아이디 <input type="text" name="userid" value="value"><br>
+            이름 <input type="text" name="username" value="value"><br>
+            비밀번호 <input type="password" name="pw" value="value"><br>
+            프로필 사진 <input type="file" name="file"><br>
+            ok? <input type="checkbox" name="ok" ><br>
+            
+            A <input type="radio" name="choice" value="A" >
+            B <input type="radio" name="choice" value="B">
+            C <input type="radio" name="choice" value="C"><br>
+            
+            <input type="submit" value="서버로 전송">
+            
+        
+        
+        </form>
+        
+        
+        
+        
+        
+        
+        <hr>
+        
+        <h1 id="tag-7"> 공간 분할 tag </h1>
+        
+        <!-- block -->
+        <div> DIV DIV DIV DIV DIV </div><div> DIV DIV DIV DIV DIV </div>
+        <!-- inline-->
+        <span> span span span </span><span> span span span </span>
+        
+        
+        
+        
+        <h1 id="tag-6">img tag</h1>
+        <img src="images/3.jpg" width="200">
+        <img src="images/2.jpg" width="200">
+        <img src="images/1.jpg" width="200" height="300">
+        
+        <img src="test" alt="이미지 파일입니다.">
+        
+        
+        
+        <h1 id="tag-5">Table tag</h1>
+        
+        <table border="1">
+            <tr>
+                <th colspan="2">지역별 홍차</th>
+                <!--<td></td>-->
+            </tr>
+            <tr>
+                <th rowspan="3">중국</th>
+                <td>정산소종</td>
+            </tr>
+            <tr>
+                <!--<td></td>-->
+                <td>기문</td>
+            </tr>
+            <tr>
+                <!--<td></td>-->
+                <td>운남</td>
+            </tr>
+            <tr>
+                <th rowspan="4">인도 및 스리랑카</th>
+                <td>아산</td>
+            </tr>
+            <tr>
+                <!--<td></td>-->
+                <td>실론</td>
+            </tr>
+            <tr>
+                <!--<td></td>-->
+                <td>다질링</td>
+            </tr>
+            <tr>
+                <!--<td></td>-->
+                <td>닐기리</td>
+            </tr>
+        </table>
+        
+        
+        <table border="1">
+            <tr>
+                    <td rowspan="2">1,1</td>
+                    <td>1,2</td>
+            </tr>
+            <tr>
+                    <!--<td>2,1</td>-->
+                    <td>2,2</td>
+            </tr>
+        </table>
+        
+        <table border="1">
+            <tr>
+                    <td colspan="2">1,1</td>
+                   <!-- <td>1,2</td>-->
+            </tr>
+            <tr>
+                    <td>2,1</td>
+                    <td>2,2</td>
+            </tr>
+        </table>
+        
+        
+        <table border="1">
+            <tr>
+                <th>tag</th>
+                <th>설명</th>
+            </tr>
+            <tr>
+                <td>Table</td>
+                <td>테이브을 생성해주는 태그</td>
+            </tr>
+            <tr>
+                <td>thead</td>
+                <td>테이블의 머리글</td>
+            </tr>
+            <tr>
+                <td>tbody</td>
+                <td>테이블의 본문</td>
+            </tr>
+            <tr>
+                <td>tfoot</td>
+                <td>테이블의 꼬리</td>
+            </tr>
+            <tr>
+                <td>tr</td>
+                <td>테이블의 행을 생성</td>
+            </tr>
+            <tr>
+                <td>th</td>
+                <td>표의 각 열의 라벨을 표현</td>
+            </tr>
+            <tr>
+                <td>td</td>
+                <td>행의 포함되는 열을 생성</td>
+            </tr>
+        
+        </table>
+        
+        
+        <hr>
+        
+        
+        <H1 id="tag-4"> LIST tag</H1>        
+        
+        
+        <!--순서없는 리스트-->
+        <ul> 
+            <li> 카카오 </li>
+            <li> 네이버 </li>
+            <li> 페이스북 </li>
+        
+        </ul>
+        <!--순서가 있는 리스트-->
+        <ol>
+            <li> 카카오 </li>
+            <li> 네이버 </li>
+            <li> 페이스북 </li>
+        </ol>
+        
+        <hr>
+    
+        
+        <h3 id="tag-3">홍차</hr3>
+        <hr>
+        <h4>정의</h4>
+        <p>
+        동양에서는 우러난 차의 빛깔(붉은색)을 보고 홍차라고 하지만, 서양에서는 찻잎의 색깔(검은색)을 보고 흑차(Black Tea)라고 부른다. 녹차는 동서양 공통으로 綠茶-Green Tea다. 즉, 동양(특히 중국)에서 '흑차'라고 하면 보이차 종류의 후발효차를 지칭하는 명칭이다. 반대로 서양에서 '홍차', 즉 red tea는 허브의 일종인 루이보스를 우려낸 대용차를 말한다.
+        </p>
+        
+        <h4> 등급 </h4>
+        <p>
+        일본 고유의 밀크티. 로열이라는 이름 때문에 영국산 홍차 레시피로 착각할 수 있으나, 로열 밀크티는 일본에서 인도의 짜이(chai)를 따라하여 만든 레시피로, 원래는 제품의 명칭이었다. 대체로 영국식 밀크티가 진하게 우린 홍차에 우유를 섞는 것이라면, 로열 밀크티는 홍차를 진하게 우리며 우유를 같이 넣어 끓이는 식이다. 적은 물로도 더 진한 홍차를 우릴 수 있기 때문에 일반적인 밀크티보다 우유의 비중을 더 높일 수 있고, 그만큼 농후하고 고소한 맛을 얻을 수 있지만, 팬에서 직접 우유를 끓이는 만큼 만드는 내내 계속 저어줘야 한다. 잘못하면 팬 하나를 버리게 되고, 잘 만들었다 해도 뒷처리가 골치아프기에, 사먹는게 가장 편하다. 어차피 자판기에서 엄청 팔아대는 데다 250ml에 100-140엔 밖에 안한다.
+        </p>
+        -브로큰 페코
+        <br><br>
+        -브로큰 페코 수숑
+        <br><br>
+        -브로큰 오렌지 페코 페닝
+        
+        
+        <h1 id="tag-2"> 문단 Tag </h1>
+        <h2> '전기차 올인' 선언하는 글로벌 車 업체들 </h2>
+        <p>
+        GM "테슬라 추월해 북미에서 전기차 선두기업 될 것"
+        폴크스바겐, 전기차 개발 자금 마련 위해 람보르기니 매각 검토
+        </p>
+        <p>
+        글로벌 자동차 업체들이 전기차 '올인(Alll-in)'을 선언하고 있다. 유럽, 중국 등 20여개국이 내연기관 차 판매 금지 계획을 구체화하고, 기후변화 대응을 강조하는 미국 바이든 행정부가 들어서면서 전기차가 글로벌 시장을 지배할 것으로 전망되기 때문이다.
+        </p>
+        <p>
+        19일(현지 시각) 메리 배라 제너럴모터스(GM) 최고경영자(CEO)는 전기차 사업 전략 확대 방안을 발표하며 2025년까지 전기차 분야에 270억달러(약 30조원)를 투자하겠다고 말했다. 이는 올해 상반기 전기차에 투자하기로 발표한 금액 200억달러보다 30%가량 늘어난 규모다.
+        </p>
+        
+        
+        
+        <hr>
+    
+        <H1 id="tag-1"> Heading tag </H1>
+        <h1> This is heading 1</h1>
+        <h2> This is heading 2</h2>
+        <h3> This is heading 3</h3>
+        <h4> This is heading 4</h4>
+        <h5> This is heading 5</h5>
+        <h6> This is heading 6</h6>
+        
+        <a href="#top"> Top tag </a>
+        
+    </body>
+</html> 
