@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자</title>
+    <style>
+        
+        /*선택자 {
+            속성이름 : 속성 값;
+            속성이름 : 속성 값;
+        }*/
+       /* p {color: black}*/
+        
+        /*전체 선택자 : 전체 폰트의 컬러값을 지정*/
+        * {
+            /*color: dodgerblue;*/
+          }
+        /*태그 선택자*/
+        h1 {
+            background-color: antiquewhite;
+        }
+        p {
+            color: blue;
+            background-color: azure;
+        }
+         h1, p , body {
+            /*margin:0;
+            padding:0;*/
+        }
+        
+        div {
+            height: 50px;
+        }
+        
+        form {
+            border: 1px solid black;
+        }
+        
+        ul {
+            border: 1px solid blue;
+        }
+        
+        li {
+            border: 1px solid red;
+        }
+        
+        /*아이디 선택자 : 아이디*/
+        #header {
+            background-color: darkorange;
+        }
+        
+        #aside {
+            background-color: bisque;
+        }
+        
+        #content {
+            background-color: aquamarine;
+        }
+        
+        
+        /*클래스 선택자 : 요소에 class 속성이 있는 것을 지정하는 선택자*/
+        div.color_white {
+            color: white;
+        }
+        
+        .color_w {
+            color: white;
+        }
+        
+        .font_size_32 {
+            font-size: 32px;
+        }
+        
+        .font_weight_bold {
+            font-weight: bold;
+        }
+        
+        .font_italic {
+            font-style: italic;
+        }
+        
+        /*속성 선택자 : 선택자[속성이름]*/
+        input[type] {
+            background-color: chartreuse;
+            color: darkgreen;
+        }
+        
+        /*속성 선택자 : 선택자[속성이름 = 값]*/
+        input[type=button] {
+            background-color: aqua;
+            padding: 10px;
+            margin: 10px;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        /*속성 선택자 : 선택자[속성이름 $= 값] : 특정 값으로 끝나는 속성*/
+        img[src$=png] {
+            border: 5px solid red;
+        }
+        img[src$=gif] {
+            border: 5px solid blue;
+        }
+        img[src$=jpg] {
+            border: 5px solid green;
+        }
+        
+        /*후손 선택자 : 선택자A 선택자B
+        A 태그 하위에 존재하는 태그를 기준으로 B 선택자를 선택*/
+        #header1 h1 {
+            background-color: black;
+            color: aliceblue;
+            font-size: 16;
+        }
+        
+        /*자손 선택자 : 선택자 A > 선택자 B
+        선택자 A로 선택된 Tag 바로 아래의 태그들 중 B로 선택*/
+        #header1>h1 {
+            border: 5px solid gray;
+            font-style: italic;
+        }
+        
+        /*동위 선택자 : 범위를 한정해서 선택
+        선택자A + 선택자B -> A선택의 태그 바로 뒤에 있는 선택자B*/
+        #div1>h1+h2 {
+            background-color: red;
+            color: yellow;
+        }    
+        
+        #div1>h1 ~ h2 {
+            background-color: black;
+        }
+        
+        /*반응 선택자
+        :hover : 마우스 커서가 특정 태그 위로 올라갈 때
+        :active : 마우스 버튼 누르고 있는 상태*/
+        
+        h1:hover {
+            background-color: red;
+            color: aquamarine;
+            cursor: pointer;
+        }
+        
+        h1:active {
+            background-color: bisque;
+            color: black;
+        }
+        
+        /*
+        상태선택자 
+        :checked   -> checked, radio
+        :focus     -> input
+        :enabled   -> 사용 가능한 input
+        :disabled  -> 사용 불가한 input
+        */
+        
+        input:enabled {
+            border: 1px solid blue;
+            background-color: aqua;
+        }
+        input:disabled {
+            border: 1px solid red;
+            background-color: darkgray;
+        }
+        
+        input:focus {
+            background-color: yellow;
+        }
+        #msg {
+            padding: 20px;
+            background-color: bisque;
+            display: none;
+        }
+        input[type=checkbook]:checked + #msg{
+            display: block;
+        }
+        
+        #nav, #nav>li {
+            border: 0;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #nav {
+            margin: 20px 0;
+            overflow: hidden; 
+            /*float: left 속성을 #nav 안으로 한정한다*/
+        } 
+        
+        #nav>li {
+            float: left;
+            padding: 0 10px;
+           /* border: 1 solid gray;*/
+        }
+        
+        #nav>li:first-child {
+            background-color: aqua;
+            border-radius: 10px 0 0 10px;
+        }
+        
+        #nav>li:last-child {
+            background-color: aqua;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        #nav>li:nth-child(2n) {
+            background-color: aqua;
+        }
+        
+        #nav>li:nth-child(2n+1) {
+            background-color: aquamarine;
+        }
+        
+        /*문자 선택자 
+        ::first-letter
+        ::first-line*/
+        
+        p::first-letter {
+            font-size: 300%;   /*16px * 3*/
+        }
+        
+        p::first-line {
+            color: blueviolet;
+        }
+        p::selection {
+            background-color: black;
+            color: aqua;
+        }
+        
+        
+        /*
+        링크 선택자 
+        :link 
+        :visited
+        */
+        
+        a:link {
+            color: aquamarine;
+            text-decoration: none;
+        }
+        a:visited {
+            color: gray;
+            text-decoration: none;
+        }
+        a:hover {
+            color: blue;
+        }
+        
+        /*a:link::after {
+            content: '(' attr(href)')';
+        }*/
+        a:link::before {
+            content: '('  attr(href) ')';
+        }
+    
+        
+        
+        
+    </style>
+</head>
+    
+
+<body>
+    
+    <h2>
+        <a href="http://www.naver.com">네이버</a>
+    
+    </h2>
+    
+    
+    
+    <p>
+    정부가 다주택자에 대한 취득세를 크게 올리면서 이들이 초저가 아파트로 몰리고 있다. 공시가 1억원 이하 아파트가 타깃이다. 취득세를 1%만 내면 돼 자산가들의 투자 상품으로 부상하고 있다.
+    </p>
+    
+    <p>
+    정부가 다주택자에 대한 취득세를 크게 올리면서 이들이 초저가 아파트로 몰리고 있다. 공시가 1억원 이하 아파트가 타깃이다. 취득세를 1%만 내면 돼 자산가들의 투자 상품으로 부상하고 있다.
+    </p>
+    
+    
+    보이기 
+    <input type="checkbox">
+    <div id="msg">
+        체크박스를 체크하시면 DIV 블록이 안보입니다.
+    </div>
+    
+    
+    <br>
+    
+    
+    <input> <input disabled>
+
+    <div id="div1">
+        <h1>Header - 1</h1>
+        <h2>Header - 2</h2>
+        <h2>Header - 2</h2>
+        <h2>Header - 2</h2>
+        <h2>Header - 2</h2>
+    </div>
+    
+   
+
+
+    <!--<div id="header1">
+        <h1 class="title">Lorem ipsum</h1>
+        <div id="nav">
+            <h1>Navigation</h1>
+        </div>
+    </div>
+    <div id="section">
+        <h1 class="title">Lorem ipsum</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <img src="images/bb8.png" height="100">
+    <img src="images/starwars1.gif" height="100">
+    <img src="mini1.jpg" height="100">
+    <h1>form tag -> input </h1>
+    <form>
+        <ul>
+            <li>
+                <input type="text">
+            </li>
+            <li>
+                <input type="button" value="Button">
+            </li>
+            <li>
+                <input type="password" value="Button">
+            </li>
+            <li>
+                <input type="button" value="새로운 버튼">
+            </li>
+        </ul>
+    </form>
+    
+    
+    
+    
+    <div id="header" class="color_w font_size_32 font_weight_bold font_italic">header</div>
+    <div id="aside" class="color_white">aside</div>
+    <div id="content" class="color_white">content</div>
+    
+    <h1 class="color_w"> 우리 은하 밖에서 발견된 외계행성의 의미 </h1>
+    <p>  태양뿐 아니라 다른 별들도 주변에 행성을 거느리고 있다는 건 이제 누구나 잘 아는 사실이다. 2019년까지 발견된 외계행성의 수가 4000개를 돌파했다. 지금까지 확인한 거의 모든 별이 행성을 거느리고 있다고 봐도 될 정도로 외계행성은 전혀 드문 존재가 아니다. 하지만 대부분 우리 은하 안에 있다. 지름 10만 광년의 거대한 우리 은하 지도 위에 외계행성의 분포를 찍어보면, 태양계에서 그리 멀리 떨어지지 않은 아주 좁은 영역에 있음을 알 수 있다. 
+    </p>-->
+</body>
+</html>

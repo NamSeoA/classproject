@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--네이버 회원가입 페이지 만들기-->
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 : 회원가입</title>
+    <style> 
+        h1 {
+            color: forestgreen;
+        }
+        input[type="button"] {
+            border: 1px solid black;
+            background-color: darkturquoise;
+        }
+    </style>
+</head>
+
+<body>
+     <h1> NAVER </h1>
+    <form action="#" method="get">
+    아이디 <br>
+    <input type="text" name="userid" ><br>
+    비밀번호 <br>
+    <input type="text" name="password"><br>
+    비밀번호 재확인 <br>
+    <input type="text" name="repassword"><br>
+    <br>
+    이름<br>
+    <input type="text" name="username"> <br>
+    생년월일<br>
+    <input type="text" name="byear" value="년(4자)">
+    <select name="bmonth">
+            <option value="월">월</option>
+            <option value="1">1</option>
+            <option value="12">12</option>
+        </select>
+    <input type="text" name="bday" value="일"> <br>
+    성별<br>
+    <select name="gender">
+            <option value="성별">성별</option>  
+            <option value="남자">남자</option>
+            <option value="여자">여자</option>
+            <option value="선택 안함">선택 안함</option>
+    </select> <br>
+    본인 확인 이메일(선택) <br>
+    <input type="text" name="email" value="선택입력"><br>
+    휴대전화 <br>
+    <select name="phonenumber">
+            <option value="대한민국 +82">대한민국 +82</option>
+            <option value="홍콩 +852">홍콩 +852</option>
+        </select> <br>
+    <input type="text" name="inputphonenum" value="전화번호 입력">
+    <input type="button" value="인증번호 받기">
+     <br>
+        
+    
+        
+        
+    </form>
+</body>
+</html>
