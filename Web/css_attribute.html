@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 속성</title>
+    
+<link rel="preconnect"
+         href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+          
+    <style>
+        h1.title {
+            background-color: beige;
+            color: black;
+            font-size: 24px;
+        }
+        
+        /*body{
+            url은 경로를 표현
+            background-image: url(images/1.jpg);
+        }*/
+     </style>
+    <style> 
+        
+        /*CSS 사용되는 단위 : %, em, px*/
+        #size1>div:nth-child(1){
+            font-size: 100%;
+        }
+        #size1>div:nth-child(2){
+            font-size: 150%;
+        }
+        #size1>div:nth-child(3){
+            font-size: 200%;
+        }
+    
+        
+        #size2>div:nth-child(1){
+            font-size: 1.0em;
+        }
+        #size2>div:nth-child(2){
+            font-size: 1.5em;
+        }
+        #size2>div:nth-child(3){
+            font-size: 2.0em;
+        }
+        
+         #size3>div:nth-child(1){
+            font-size: 16px;
+        }
+        #size3>div:nth-child(2){
+            font-size: 24px;
+        }
+        #size3>div:nth-child(3){
+            font-size: 32px;
+        }
+    
+    </style>
+    <style>
+        #color>h4:nth-child(1){
+            /*키워드를 이용한 색상 값*/
+            background-color: cadetblue;
+            color: antiquewhite;
+        }
+         #color>h4:nth-child(2){
+             /*rgb(R,G,B)를 이용한 색상 표현*/
+            background-color: rgb(123, 100, 22);
+            color: rgb(0,255,255);
+        }
+         #color>h4:nth-child(3){
+        /* rgba(R,G,B,A)를 이용한 색상 표현 : 투명도도 표현*/
+            background-color: rgba(255,0,0,0.5);
+            color: azure;
+        }
+         #color>h4:nth-child(4){
+            /*#000000를 이용한 색상 표현*/
+            /*background-color: #EEEEEE;*/
+             background-color: #EEE; /*= #EEEEEE*/
+            color: #DE4581;
+        }
+    </style>
+    <style>
+        /*박스 속성 : width, height, border, padding, margin*/
+        #box1 {
+            background-color: cornflowerblue;
+            
+            /*표현 영역*/
+            width: 100px;
+            height: 100px;
+            
+            /*테두리*/
+            border : 10px solid black;
+        
+            /*테두리와 텍스 사이의 간격*/
+            padding: 10px;
+            /*padding-top: 30px;*/
+            
+            /*요소 태그들과의 간격*/
+            /*margin : 200px;*/
+        }
+        
+        #box2 {
+            background-color: dodgerblue;
+            
+            width: 100px; height: 100px;
+            
+            padding: 10px;
+            margin: 10px;
+            
+            border: 5px solid gray;
+            /*border-radius: 좌상 우상 우하 좌하(전체) */
+            /*border-radius: 10px;*/
+            
+            /*border-radius: 좌상우하 우상좌하 */
+            /*border-radius: 10px 30px;*/
+            
+            /*border-radius: 좌상 우상 우하 좌하 */
+            /*border-radius: 10px 20px 30px 40px;*/
+            
+            /*border-radius: 좌상 우상 우하 좌하 */
+            border-radius: 70px;
+            
+            background-image: url(images/1.jpg);
+            background-size: contain;
+        }
+        
+        
+    </style>
+    <style> 
+        #display span {
+            background-color: antiquewhite;
+            width: 100px;
+            height: 100px;
+        }
+        
+        #display>span:nth-child(1){
+            /*화면에서 요소 태그를 표현하지 않는다.*/
+            /*display: none;*/
+            width: 100px;
+            height: 100px;
+        }
+        #display>span:nth-child(2){
+            /*display: block;*/
+            display: inline-block;
+        }
+        #display>span:nth-child(3){
+            
+        }
+        
+        
+    
+    </style>
+    
+    <style> 
+        #font {
+            /*font-family: '궁서체';*/
+            font-family: 'Nanum+Myeongjo';
+            font-size: 3em;
+            /*font-weight: bold;*/
+            font-weight: lighter;
+            font-style: italic;
+            color: mediumslateblue;
+            
+            /*텍스트의 수평 방향의 정렬 : text-align */
+            text-align: center;
+        }
+    </style>
+    <style>
+        
+        h3 {
+            text-align: center;
+            text-shadow: 5px 5px 5px
+            gray;
+        }
+        
+        h3+h4 {
+            text-align: right;
+        }
+        h3+h4+p {
+            line-height: 180%;
+            border: 1px solid #EEE;
+            width: 80%;
+            box-shadow: 5px 5px 20px gray;
+        }
+    </style>
+</head>
+
+<body>
+    
+    
+    <h1 class="title"> 텍스트의 중앙 정렬 </h1>
+    <h3> 텍스트 수평 방향의 정렬 </h3>
+    <h4> 2020.11.24 </h4>
+    <p>
+    미국 웨드부시 증권사가 보급형 전기차 모델3를 앞세운 테슬라에 대한 목표주가를 최고 1000달러로 상향 조정했다. 더욱 확대될 전 세계 전기차 시장에서 주도적 위치를 차지할 거란 분석이 바탕이 됐다.
+    </p>
+    
+    
+    
+    <h1 class="title">폰트 관련 속성 : font-family, font-size, font-style, font-weight </h1>
+    <div id="font">
+        안녕하세요. 반갑습니다.
+    </div>
+    
+    <h1 class="title">display 속성 : none, block, inline, inline-block</h1>
+    <div id="display"> 
+        <span>span1</span>
+        <span>span2</span>
+        <span>span3</span>
+    </div>
+    
+    
+    <h1 class="title">
+        박스 속성 : width, height, border, padding, margin
+    </h1>
+    <div>
+        <div id="box2">  </div>
+        
+        <div id="box1">
+            BOX BOX BOX BOX BOX BOX BOX
+        </div>
+    </div>
+    
+    
+    <h1 class="title">Color를 표현하는 단위</h1>
+    <div id="color"> 
+        <h4> 키워드 이용한 색상 표현</h4>
+        <h4>rgb(R,G,B) 이용 색상표현</h4>
+        <h4>rgba(R,G,B,A) 이용 색상표현</h4>
+        <h4> #000000</h4>
+    </div>
+    
+    
+    
+    <h1 class="title"> Font-size : 단위를 확인 </h1>
+    <div>
+    <div id="size1"> 
+        <div> font-size : 100% </div>
+        <div> font-size : 150% </div>
+        <div> font-size : 200% </div>
+    </div>
+    <div id="size2"> 
+        <div> font-size : 1.0em </div>
+        <div> font-size : 1.5em </div>
+        <div> font-size : 2.0em </div>
+    </div>
+    <div id="size3"> 
+        <div> font-size : 16px </div>
+        <div> font-size : 24px </div>
+        <div> font-size : 32px </div>
+    </div>
+    </div>
+    
+    
+</body>
+</html>
