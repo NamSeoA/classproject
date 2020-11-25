@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+
+
+#facebook {
+    width: 960px;
+    margin: 20px auto;
+}
+
+
+#content {
+    float: left;
+     width:620px;
+    min-height: 100%;
+    
+}
+
+#log {
+    float: left;
+    width: 340px;
+    height: 100%;
+    padding: 50px 30px;
+    overflow: hidden;
+}
+
+fb {
+}
+
+#facebook>content>input[type=text1]{
+    border-top: solid white;
+}
+
+
+footer {
+    clear: both;
+}
