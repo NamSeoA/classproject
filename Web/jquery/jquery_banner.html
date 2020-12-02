@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배너 이미지</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            setInterval(function() {
+                $('img').first().appendTo('div');
+            }, 3000);
+
+        })
+    </script>
+
+
+    <style>
+        div {
+            /*폭이 150px로 변경되어 사진들이 세로로 내려감*/
+            width: 150px;
+            height: 150px;
+
+            border: 2px solid #DDD;
+
+            /*범위 넘어가는 사진들 숨기기_사용자 화면에서만*/
+            overflow: hidden;
+        }
+
+
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div>
+        <img src="../images/1.jpg">
+        <img src="../images/2.jpg">
+        <img src="../images/3.jpg">
+        <img src="../images/4.jpg">
+    </div>
+
+
+</body></html>
