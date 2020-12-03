@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 20px;
+    font-size: 35px;
+}
+
+hr{
+    border: 0;
+    border-top: 2px solid #ccc
+}
+
+h2.userreg {
+   margin: 20px 20px 20px;;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+#register {
+    margin: 20px 20px;
+}
+
+#register>table {
+    width: 500px;
+}
+
+#register>table td {
+    font-size: 12px;
+    font-weight: lighter;
+    vertical-align: top;
+}
+
+#register>table input {
+    margin: 5px 0px;
+    width: 100px;
+    padding: 5px;
+}
+
+#register>table label {
+    display: block;
+}
+
+#register>table input[type=submit] {
+    width: 70px;
+    margin: 10px;
+    background-color: darkseagreen;
+    color: darkcyan;
+    border: 2px solid #DDD;
+}
+
+
+div.m {
+    font-size: 4px;
+    display: none;
+    color: aquamarine;
+}
+
+
+table.t {
+    margin: 12px 30px;
+    width: 400px;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+table.t td, table.t th {
+    padding: 8px;
+    border: 1.5px solid gray;
+    background-color: aliceblue;
+    text-align: center;
+}
+
+
+
+
+
+
+
