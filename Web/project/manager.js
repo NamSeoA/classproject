@@ -42,6 +42,8 @@ window.onload = function () {
         
         setlist();
 
+        //JSON.parse() -> 인수로 전달받은 문자열을 자바스크립트 객체로 변환하여 반환
+        //JSON.stringify() ->  인수로 전달받은 자바스크립트 객체를 문자열로 변환하여 반환 
     }
 
 
