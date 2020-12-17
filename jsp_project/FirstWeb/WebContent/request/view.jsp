@@ -2,7 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	FormData data = (FormData) request.getAttribute("data");
+	FormData data = (FormData) request.getAttribute("data"); 	//이름이 data인 속성의 값을 구한다
      
 %>
 <!DOCTYPE html>

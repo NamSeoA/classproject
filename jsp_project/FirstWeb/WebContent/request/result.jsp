@@ -21,7 +21,7 @@
 	
 
 	//2. view.js로  beans 객체를 전달(공유)
-	request.setAttribute("data", formData);
+	request.setAttribute("data", formData); //이름이 data인 속성의 값을 formData로 지정
 
 %>
 

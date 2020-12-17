@@ -9,7 +9,7 @@
 </head>
 <body>
 <%
-		Enumeration<String> attrNames = application.getAttributeNames();
+		Enumeration<String> attrNames = application.getAttributeNames();  //속성의 이름 목록을 구한다.
 		
 		while(attrNames.hasMoreElements()){
 			String attrName = attrNames.nextElement();
