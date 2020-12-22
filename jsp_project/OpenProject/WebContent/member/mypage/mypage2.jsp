@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="styleSheet" href="<%=request.getContextPath()%>/css/default.css">
+<link rel="styleSheet" href="${pageContext.request.contextPath}/css/default.css">
 <style>
 </style>
 </head>
@@ -20,7 +20,8 @@
 	<h2 class="content_title">My page 2</h2>
 	<hr>
 	<div class="content">
-		<%= session.getAttribute("loginInfo") %>
+		<%-- <%= session.getAttribute("loginInfo") %> --%>
+		${loginInfo}
 	</div>
 </div>
 

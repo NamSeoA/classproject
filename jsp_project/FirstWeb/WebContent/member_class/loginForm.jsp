@@ -2,9 +2,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	CookieBox cookieBox = new CookieBox(request);
-	String saveId = cookieBox.exists("uid") ? cookieBox.getValue("uid") : "";
-	String checked = cookieBox.exists("uid") ? " checked " : "";
+		CookieBox cookieBox = new CookieBox(request);
+	
+		String saveId = cookieBox.exists("uid") ? cookieBox.getValue("uid") : "";
+		String checked = cookieBox.exists("uid") ? " checked " : "";
 %>
 <!DOCTYPE html>
 <html lang="ko">
@@ -23,7 +24,8 @@
             <tr>
                 <th><label for="userid">아이디</label></th>
                 <td>
-                    <input type="text" id="userid" name="userid" value="<%= saveId%>">
+                    <%-- <input type="text" id="userid" name="userid" value="<%= saveId%>"> --%>
+                    <input type="text" id="userid" name="userid" value="${cookie.uid.value}">	<!-- html안에 있는 속성 값에도 들어갈 수 있음 -->
                 </td>
             </tr>
             <tr>

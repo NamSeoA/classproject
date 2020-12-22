@@ -12,7 +12,17 @@ public class Member {
 	// 기본 생성자 필수
 	public Member() {
 	}
+	
+	//생성자 추가
+	public Member(String userId, String pw, String userName, String photo) {
+		this.userId = userId;
+		this.pw = pw;
+		this.userName = userName;
+		this.photo = photo;
+	}
 
+	
+	
 	public String getUserId() {
 		return userId;
 	}
