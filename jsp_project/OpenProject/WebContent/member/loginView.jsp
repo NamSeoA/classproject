@@ -9,7 +9,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="styleSheet" href="${pageContext.request.contextPath}/css/default.css">
+<link rel="styleSheet" href="${url_defaultCss}">
 <style>
 </style>
 </head>
@@ -17,7 +17,6 @@
 	<%@ include file="/include/header.jsp" %>
 	
 	<%@ include file="/include/nav.jsp" %>
-
 
 <div class="contents">
 	<h2 class="content_title">Login</h2>

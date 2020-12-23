@@ -21,7 +21,7 @@
 		
 				// conn=null이면 위에서 처리할 이유 없기 때문에
 				// 폼의 입력한 사용자 입력 데이터의 한글 처리
-				request.setCharacterEncoding("utf-8");
+				// request.setCharacterEncoding("utf-8"); -> 필터 처리
 
 				String userId = request.getParameter("userid");
 				String pw = request.getParameter("pw");
