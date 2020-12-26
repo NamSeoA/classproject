@@ -29,6 +29,11 @@
 	 	<url-pattern>/member/mypage/*</url-pattern>
  </filter-mapping>
  
+  <filter-mapping>
+	 	<filter-name>loginCheck</filter-name>
+	 	<url-pattern>/member/manager/*</url-pattern>
+ </filter-mapping>
+ 
  <filter>
  	<filter-name>encodingFilter</filter-name>
  	<filter-class>filter.CharacterEncodingFilter</filter-class>

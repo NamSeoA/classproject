@@ -35,8 +35,8 @@
 		height="50"
 		> --%>
 		<img alt="프로필 사진" 
-		src="${pageContext.request.contextPath}/images/${loginInfo.memberPhoto}"
-		height="50"
+		src="${pageContext.request.contextPath}/upload/member/${loginInfo.memberPhoto}"
+		height="100"
 		>
 		<%} %>
 	</div>

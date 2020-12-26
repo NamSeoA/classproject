@@ -23,6 +23,6 @@
 		</li>
 		<li> <a href="<c:url value="/member/mypage/mypage1.jsp" />">Mypage1</a> </li>
 		<li> <a href=" <c:url value="/member/mypage/mypage2.jsp" />">Mypage2</a> </li>
-		<li> <a href="#">Home</a> </li>
+		<li> <a href=" <c:url value="/member/manager/memberList.jsp" />">회원 정보</a> </li>
 	</ul>
 </nav>
