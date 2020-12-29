@@ -7,7 +7,7 @@
 <%@page import="member.dao.MemberDao"%>
 <%@page import="jdbc.ConnectionProvider"%>
 <%@page import="java.sql.Connection"%>
-<%@page import="member.Member"%>
+<%@page import="member.model.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <% 
@@ -40,6 +40,7 @@
 					DiskFileItemFactory factory = new DiskFileItemFactory();
 					ServletFileUpload upload = new ServletFileUpload(factory);
 					List<FileItem> items = upload.parseRequest(request);
+					
 					Iterator<FileItem> itr = items.iterator();
 					
 					

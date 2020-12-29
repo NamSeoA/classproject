@@ -41,4 +41,21 @@ public class jdbcUtil {
 		}
 	}
 
+	
+	// 이전으로
+	public static void rollback(Connection conn) {
+		try {
+			conn.rollback();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
 }

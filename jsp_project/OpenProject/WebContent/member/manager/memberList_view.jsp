@@ -10,6 +10,7 @@
 <title>Insert title here</title>
 <%-- <link rel="styleSheet"
 	href="${pageContext.request.contextPath}/css/default.css"> --%>
+	
 <link rel="styleSheet" href="${url_defaultCss}">
 <style>
 </style>
@@ -27,46 +28,48 @@
 
 			<table border="1">
 				<tr>
-					<th>아이디</th>
-					<th>비밀번호</th>
-					<th>이름</th>
-					<th>사진</th>
-					<th>가입일시</th>
+						<th>아이디</th>
+						<th>비밀번호</th>
+						<th>이름</th>
+						<th>사진</th>
+						<th>가입일시</th>
 				</tr>
 
-				<c:if test="${empty memberList}">
+				<c:if test="${empty listView.memberList}">
 				<tr>
-					<td colspan="5">회원정보가 없습니다.</td>
+						<td colspan="5">회원정보가 없습니다.</td>
 				</tr>
 				</c:if>
 				
-				<c:if test="${!empty memberList}">
+				<c:if test="${!empty listView.memberList}">
 				
-				<c:forEach items="${memberList}" var="member">
+				<c:forEach items="${listView.memberList}" var="member">
 				<tr>
-					<td>${member.userId}</td>
-					<td>${member.pw}</td>
-					<td>${member.userName}</td>
-					<td> 
-						<img alt="회원 프로필 사진" height="50" src="<c:url value="/upload/member/${member.userPhoto}"/>">
-					</td>
-					<td>
-						<fmt:formatDate value="${member.date}" pattern="yyyy.MM.dd HH:mm:ss"/>
-					</td>				
+						<td>${member.userId}</td>
+						<td>${member.pw}</td>
+						<td>${member.userName}</td>
+						<td> 
+							<img alt="회원 프로필 사진" height="50" src="<c:url value="/upload/member/${member.userPhoto}"/>">
+						</td>
+						<td>
+							<fmt:formatDate value="${member.date}" pattern="yyyy.MM.dd HH:mm:ss"/>
+						</td>				
 				</tr>
 				</c:forEach>
 				
 				</c:if>
-				
 			</table>
+			
+			<div class="paging">
+				<c:forEach var="num" begin="1" end="${listView.pageTotalCount}">
+				[ <a href="memberList.jsp?page=${num}">${num}</a> ]
+				</c:forEach>
+			</div>
 
 		</div>
 	</div>
 
 	<%@ include file="/include/footer.jsp"%>
-
-
-
 
 
 </body>

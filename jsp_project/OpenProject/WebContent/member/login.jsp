@@ -1,9 +1,9 @@
-<%@page import="member.LoginInfo"%>
+<%@page import="member.model.LoginInfo"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="jdbc.ConnectionProvider"%>
 <%@page import="member.dao.MemberDao"%>
 <%@page import="util.CookieBox"%>
-<%@page import="member.Member"%>
+<%@page import="member.model.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
@@ -38,8 +38,8 @@
 			
 			//인증이 되어 로그인 처리 : session 객체에 로그인 정보를 속성에 저장
 			// System.out.println(member);
-		
 			LoginInfo loginInfo = member.toLoginInfo();
+			
 			session.setAttribute("loginInfo", loginInfo);
 			//System.out.println(loginInfo);
 			loginChk = true;

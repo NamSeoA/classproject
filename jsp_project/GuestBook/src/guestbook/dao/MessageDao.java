@@ -8,6 +8,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.text.html.HTMLDocument.HTMLReader.PreAction;
+
 import guestbook.model.Message;
 import jdbc.jdbcUtil;
 
@@ -78,6 +80,7 @@ public class MessageDao {
 		}
 
 		
+	
 		public List<Message> selctList(
 				Connection conn, 
 				int firstRow, 
@@ -126,6 +129,54 @@ public class MessageDao {
 			
 			return message;
 			
+		}
+
+
+		public Message selectMessage(Connection conn, int mid) throws SQLException {
+			Message message = null;
+			
+			PreparedStatement pstmt = null;
+			ResultSet rs = null;
+			
+			String sql = "select * from guestbook_message where message_id=?";
+			
+			try { // 예외처리 하지 않지만 finally 구문 쓰기위해  try 구문 사용
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setInt(1, mid);
+				
+				// 결과 받기
+				rs = pstmt.executeQuery();
+				
+				if(rs.next()) {
+					message = makeMessage(rs); //메세지를 받게 됨
+				}
+			}finally {
+				jdbcUtil.close(rs);
+				jdbcUtil.close(pstmt);
+			}
+			
+			
+			return message;
+		}
+
+
+		// 삭제 메서드
+		public int deleteMessage(Connection conn, int mid) throws SQLException {
+			
+			int resultCnt = 0;
+			PreparedStatement pstmt = null;
+			
+			String sql="DELETE FROM guestbook_message WHERE message_id=?";
+			try {
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setInt(1, mid);
+				
+				resultCnt = pstmt.executeUpdate();	
+			}finally {
+				jdbcUtil.close(pstmt);
+			}
+			
+			return resultCnt;
 		}
 	
 	
