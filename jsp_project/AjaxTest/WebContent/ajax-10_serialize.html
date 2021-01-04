@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- Jquery SDK 로드 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+ $(document).ready(function(){
+	 
+	/* $('input:button').click(function(){
+		 
+		 // 문자열 형식으로도 들어갈 수 있다.
+		    $.ajax({
+				//url : 'parameter.jsp?pname='+$('#pname').val()+'&price='+$('#price').val(),
+				url : 'parameter.jsp',
+				type : 'get',
+			  data : {
+					pname : $('#pname').val(),
+					price : $('#price').val()
+				}, 
+				success : function(data){
+					$('body').append(data);
+				}
+			});  
+		 
+	 }); */
+	 
+	 $('#myform').submit(function(event){
+		 
+		 $.ajax({
+			 url : 'parameter.jsp',
+			 data : $(this).serialize(),
+			 success : function(data){
+				 $('body').append(data);
+			 }
+		 });
+		 
+		 return false; 
+	 });
+ });
+</script>
+</head>
+<body>
+	<h3>제품 등록</h3>
+	<form id="myform"> 
+	이름<input type="text" id="pname" name="pname"><br> <!-- name값을 이용해서 전달* -->
+	가격<input type="number" id="price" name="price"><br>
+	<input type="submit" value="등록">
+	</form>
+	
+	
+	<h1>가격표</h1>
+</body>
+</html>
