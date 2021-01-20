@@ -1,17 +1,16 @@
-package com.aia.firstspring.member.domain;
+package com.aia.firstspring.domain;
 
 public class SearchType {
 
 	private int value;
 	private String label;
-	
+
 	public SearchType(int value, String label) {
 		super();
 		this.value = value;
 		this.label = label;
 	}
 
-	// view쪽에서 데이터 쓸 수 있게 하기위해
 	public int getValue() {
 		return value;
 	}
@@ -29,5 +28,5 @@ public class SearchType {
 	}
 	
 	
-	
+
 }

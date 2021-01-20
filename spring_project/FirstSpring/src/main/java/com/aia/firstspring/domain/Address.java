@@ -1,4 +1,4 @@
-package com.aia.firstspring.member.domain;
+package com.aia.firstspring.domain;
 
 public class Address {
 

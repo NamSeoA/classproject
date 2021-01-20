@@ -1,4 +1,4 @@
-package com.aia.firstspring.member.domain;
+package com.aia.firstspring.domain;
 
 import java.util.List;
 
@@ -29,7 +29,5 @@ public class OrderCommand {
 	}
 	
 	
-	
 
-	
 }

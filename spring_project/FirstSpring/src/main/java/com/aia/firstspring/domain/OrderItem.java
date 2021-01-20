@@ -1,6 +1,5 @@
-package com.aia.firstspring.member.domain;
+package com.aia.firstspring.domain;
 
-//Beans
 public class OrderItem {
 
 	private String itemId;
@@ -37,4 +36,5 @@ public class OrderItem {
 	}
 	
 	
+
 }

@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.aia.firstspring.member.domain.OrderCommand;
+import com.aia.firstspring.domain.OrderCommand;
 
 @Controller
 @RequestMapping("/order/order")

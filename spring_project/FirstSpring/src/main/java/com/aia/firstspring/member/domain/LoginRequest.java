@@ -2,11 +2,9 @@ package com.aia.firstspring.member.domain;
 
 public class LoginRequest {
 
-	// Form에 있는 uid와 같게
 	private String uid;
 	private String pw;
 
-	// getter, setter
 	public String getUid() {
 		return uid;
 	}

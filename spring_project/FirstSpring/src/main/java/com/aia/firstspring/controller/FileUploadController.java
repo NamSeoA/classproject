@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import com.aia.firstspring.member.domain.ReportUploadRequest;
+import com.aia.firstspring.domain.ReportUploadRequest;
 
 
 
