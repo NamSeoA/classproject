@@ -8,16 +8,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	<select id="selectMemberList"
 		resultType="com.aia.firstspring.member.domain.Member">
-		select * from
-		member order by membername
+		select * from member order by membername
 
 	</select>
 
 	<insert id="insertMember"
 		parameterType="com.aia.firstspring.member.domain.Member"
 		useGeneratedKeys="true" keyProperty="idx">
-		insert into member
-		(memberid, membername, password)
+		insert into member (memberid, membername, password)
 		values(#{memberid},#{membername},#{password})
 	</insert>
 
@@ -27,7 +25,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	<select id="selectByIdx"
 		resultType="com.aia.firstspring.member.domain.Member">
-		select * from member where idx=#{idx}
+		select * from member where idx = #{idx}
 	</select>
 
 </mapper>

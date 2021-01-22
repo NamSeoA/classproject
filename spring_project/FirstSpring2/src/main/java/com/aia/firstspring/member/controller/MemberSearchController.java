@@ -13,9 +13,10 @@ public class MemberSearchController {
 			@RequestParam(value = "p", defaultValue = "1") int pageNumber,
 			//@RequestParam("uid") String uid,
 			@RequestParam(value = "uid", required = false) String uid,
+			//@RequestParam("name") String name
 			@RequestParam(value = "name", required = false) String name
 			) {
-		// http://localhost:8080/.../member/search?p=1&uid=cool&name=COOL		
+			// http://localhost:8080/.../member/search?p=1&uid=cool&name=COOL		
 
 		System.out.println("p : "+pageNumber);
 		System.out.println("uid :"+uid);

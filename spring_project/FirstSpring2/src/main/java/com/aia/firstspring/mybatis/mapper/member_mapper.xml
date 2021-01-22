@@ -16,8 +16,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		parameterType="com.aia.firstspring.member.domain.Member"
 		useGeneratedKeys="true" keyProperty="idx">
 			
-		insert into member (memberid,
-		membername, password)
+		insert into member (memberid, membername, password)
 		values(#{memberid},#{membername},#{password})
 		
 	</insert>

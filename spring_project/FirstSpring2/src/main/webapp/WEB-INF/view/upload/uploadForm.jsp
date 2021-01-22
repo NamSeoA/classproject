@@ -23,7 +23,7 @@
 	</form>
 	
 	<hr>
-	<h3>MultipartHttpServletRequest 이용한 파일 업로드</h3>
+	<h3>@MultipartHttpServletRequest 이용한 파일 업로드</h3>
 	<form action="upload2"
 				method="POST"
 				enctype="multipart/form-data"

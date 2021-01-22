@@ -10,7 +10,7 @@
 
 	<h1>Login Form</h1>
 	
-	<form method="POST">
+	<form method="POST"> <!-- /member/login -->
 		id <input type="text" name="uid"> <br>
 		pw <input type="password" name="pw"> <br>
 		<input type="submit">

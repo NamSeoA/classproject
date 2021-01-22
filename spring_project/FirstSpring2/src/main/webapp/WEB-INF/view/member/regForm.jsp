@@ -10,7 +10,7 @@
 <body>
 
 	<h1>회원 가입 폼</h1>
-	<!-- 	<form method="post">
+<!-- 	<form method="post">
 		아이디 <input type="text" name="memberid" id="memberid"><br>
 		비밀번호 <input type="password" name="password" id="password"><br>
 		이름 <input type="text" name="membername" id="membername"><br>
@@ -18,8 +18,7 @@
 	</form> -->
 	<!-- 
 	2021.01.20
-	Rest ajax 사용 목적으로 코드 수정 
-	-->
+	Rest ajax 사용 목적으로 코드 수정 -->
 	<form id="regForm">
 		아이디 <input type="text" name="memberid" id="memberid"><br>
 		비밀번호 <input type="password" name="password" id="password"><br>
@@ -28,10 +27,10 @@
 	</form>
 	<script>
 	
-		$('#regForm').submit(function(){
+		$('#regForm').submit(function(){ // submit이 눌러지면 
 			
 			var data = {
-					memberid : $('#memberid').val(),
+					memberid : $('#memberid').val(), //사용자가 입력한 데이터 가져옴
 					password : $('#password').val(),
 					membername : $('#membername').val()
 			};
@@ -41,13 +40,13 @@
 				type : 'POST',
 				data : JSON.stringify(data),
 				contentType : 'application/json; charset=utf-8',
-				/* dataType : 'json', */
-				async : false,
-				success : function(msg){ // msg JSON -> javascript object
+				/* dataType : 'json', */ //응답으로 받는 데이터
+				async : false, // 동기화방식. 버튼 계속 눌러도 처리 안되게 함
+				success : function(msg){ // msg JSON -> javascript object (성공 했을 때)
 					console.log(msg);
 					//alert(JSON.stringify(msg));
 					if(msg == 'Y'){
-						alert('회원가입이 저상적으로 처리되었습니다.');
+						alert('회원가입이 정상적으로 처리되었습니다.');
 						
 					} else {
 						alert('오류가 발생했습니다. 다시 시도해주세요.');
@@ -58,10 +57,8 @@
 					console.log(err);
 					alert('오류가 발생했습니다. 다시 시도해주세요.');
 				}
-				
 			});
-			
-			return false;
+			return false; // 초기화 화면으로 보이지않기위함
 		});
 	
 	

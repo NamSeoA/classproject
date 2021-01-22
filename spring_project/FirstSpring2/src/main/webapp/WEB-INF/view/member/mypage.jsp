@@ -9,7 +9,8 @@
 <body>
 
 	<h1>
-		${idx}<br> ${member}
+		${idx}<br> 
+		${member}
 	</h1>
 
 </body>
