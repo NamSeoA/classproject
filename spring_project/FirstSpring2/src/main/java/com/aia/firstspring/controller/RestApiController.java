@@ -19,7 +19,7 @@ import com.aia.firstspring.member.service.MemberListService;
 import com.aia.firstspring.member.service.MemberRegService;
 import com.aia.firstspring.member.service.MemberRestService;
 
-@RestController
+@RestController // jsp파일 경로를 찾지않고 반환하는 문자열 그대로 응답처리
 @RequestMapping("/rest/ver1/members")
 public class RestApiController {
 
@@ -32,7 +32,7 @@ public class RestApiController {
 	@Autowired
 	private MemberRegService regService;
 
-	//	@GetMapping("/{idx}") // GET  /rest/ver1/members/39
+	//	@GetMapping("/{idx}") // GET방식,   /rest/ver1/members/39
 	//@GetMapping
 	//	public String getRest(
 	//			@PathVariable("idx") int idx

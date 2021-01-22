@@ -13,16 +13,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class CookieController {
 
 	@RequestMapping("/cookie/make")
-	public String makeCookie(HttpServletResponse response) {
-		// 쿠키 생성 -> 응답으로 처리 
+	public String makeCookie(HttpServletResponse response) { // response 객체 사용을 위해
+		// 쿠키(문자열 저장) 생성 -> 응답으로 처리
 		response.addCookie(new Cookie("auth", "test"));
 		return "cookie/make"; // /WEB-INF/view/cookie/make.jsp
 	}
 
 	@RequestMapping("/cookie/view")
 	public String viewCookie(
-			Model model,
+			Model model, // view에 보낼 데이터가 있어서 퀵 부름
 			HttpServletRequest request,
+			// @CookieValue("auth") String cookieAuth
 			@CookieValue(value = "auth", defaultValue = "not") String cookieAuth,
 			@CookieValue(value = "uid", required = false) String uid
 			) {
@@ -33,7 +34,7 @@ public class CookieController {
 		}
 
 		model.addAttribute("userName", "손흥민");
-		model.addAttribute("cooKieInfo", cookies);
+		model.addAttribute("cooKieInfo", cookies); //배열
 		model.addAttribute("cookieAuth", cookieAuth);
 		model.addAttribute("uid", uid);
 

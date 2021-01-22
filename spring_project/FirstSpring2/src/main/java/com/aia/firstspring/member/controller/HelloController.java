@@ -10,12 +10,12 @@ import org.springframework.web.servlet.ModelAndView;
 public class HelloController {
 
 
-	// 메소드는 ViewName 반환해야한다. 반환타입을 ModelAndView를 이용해서 반환
+	// 메소드는 ViewName 반환해야한다. 반환타입은 ModelAndView를 이용해서 반환 (String / ModelAndView 제일 많이 사용)
 	@RequestMapping("/hello")
 	public ModelAndView hello() {
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("member/hello");  // /WEB-INF/view/member/hello.jsp -> member/hello
-		mav.addObject("greeting", greeting());
+		mav.setViewName("member/hello");  // /WEB-INF/view/member/hello.jsp (+ prefix(/WEB-INF/view/) surfix(.jsp)) -> member/hello
+		mav.addObject("greeting", greeting()); // 공유할 데이터
 
 		return mav;
 	}

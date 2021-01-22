@@ -35,15 +35,12 @@ public class GuestMessageController {
 		return getMessageList2();
 	}
 
-
-
-
-	private GuestMessageList2 getMessageList2() {
+	private GuestMessageList2 getMessageList2() { // 확장자 큰 의미 없음
 
 		List<GuestMessage2> list = new ArrayList<GuestMessage2>();
 		list.add(new GuestMessage2(1, "HI", new Date()));
 		list.add(new GuestMessage2(2, "Hello", new Date()));
-		list.add(new GuestMessage2(3, "bye", new Date()));
+		list.add(new GuestMessage2(3, "Bye", new Date()));
 
 		return new GuestMessageList2(list);
 	}

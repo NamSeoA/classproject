@@ -11,6 +11,7 @@ import com.aia.firstspring.domain.OrderCommand;
 @RequestMapping("/order/order")
 public class OrderController {
 
+	// 동일한 URL로 GET,POST 방식 모두 처리할 경우
 	@RequestMapping(method = RequestMethod.GET)
 	public String getOrderForm() {
 		return "order/orderForm";

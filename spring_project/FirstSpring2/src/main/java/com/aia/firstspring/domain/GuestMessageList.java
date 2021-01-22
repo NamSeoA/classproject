@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "message-list") // <message-list></message-list>
+@XmlRootElement(name = "message-list") // list 태그 만듬 <message-list></message-list>
 public class GuestMessageList {
 
 	@XmlElement(name = "message")

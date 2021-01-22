@@ -32,6 +32,7 @@ public class MemberRegRequest {
 		this.membername = membername;
 	}
 
+	// Member 객체 변환
 	public Member getToMember() {
 		Member member = new Member();
 		member.setMemberid(memberid);

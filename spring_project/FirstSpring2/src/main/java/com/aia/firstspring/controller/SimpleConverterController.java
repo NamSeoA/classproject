@@ -16,10 +16,10 @@ public class SimpleConverterController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	@ResponseBody
+	@ResponseBody  // 반환하는 문자열 그대로 응답
 	public String simple(@RequestBody String body) {
 
-		System.out.println(body+" @ResponseBody 어노테이션은 일반 객체도 응답 처리가 됩니다.");
+		System.out.println(body+" @ResponseBody 어노테이션은 일반 객체도 응답 처리가 됩니다.");  // uname=cool&age=20  
 
 		return body+" @ResponseBody 어노테이션은 일반 객체도 응답 처리가 됩니다.";
 

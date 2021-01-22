@@ -17,7 +17,7 @@ public class MemberLoginController {
 	// @RequestMapping(value = "/member/login", method = RequestMethod.GET)
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView getLoginForm() {
-		return new ModelAndView("member/loginForm");
+		return new ModelAndView("member/loginForm"); // view 페이지 return
 	}
 
 	// @RequestMapping(value = "/member/login", method = RequestMethod.POST)
@@ -26,8 +26,8 @@ public class MemberLoginController {
 			@RequestParam("uid") String uid, 
 			@RequestParam("pw") String pw,
 			HttpServletRequest request, 
-			LoginRequest loginRequest
-			) {
+			LoginRequest loginRequest //command 객체
+			) { 
 
 		// 사용자의 파라미터 값을 받는 방법
 		// 1. HttpServletRequest 객체를 이용
@@ -35,7 +35,6 @@ public class MemberLoginController {
 		// 3. 커멘드 객체(Beans)를 이용
 
 		// login("cool", "1111")
-
 		System.out.println(loginRequest);
 
 		String userId = request.getParameter("uid");

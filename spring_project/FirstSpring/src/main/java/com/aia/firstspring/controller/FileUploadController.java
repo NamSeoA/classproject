@@ -58,6 +58,7 @@ public class FileUploadController {
 		
 		System.out.println(report.getOriginalFilename());
 		
+		// 파일 업로드
 		report.transferTo(getFile(request, URI, report.getOriginalFilename()));
 		
 		

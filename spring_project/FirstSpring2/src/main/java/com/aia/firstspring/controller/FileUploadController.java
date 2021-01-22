@@ -28,12 +28,13 @@ public class FileUploadController {
 	public String upload1(
 			@RequestParam("sn") String sn,
 			@RequestParam("report") MultipartFile report,
-			Model model,
+			Model model, // view에 전달
 			HttpServletRequest request
 			) throws IllegalStateException, IOException {
 
 		System.out.println(report.getOriginalFilename());
 
+		// 전달
 		model.addAttribute("sno", sn);
 		model.addAttribute("reportFile", report.getOriginalFilename());
 
